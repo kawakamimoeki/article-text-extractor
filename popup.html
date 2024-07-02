@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Article Text Extractor</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+      }
+      #extractedContent {
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      #copyButton,
+      #extractButton {
+        margin-top: 10px;
+        margin-right: 5px;
+      }
+      #apiKeyInput {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      #status {
+        margin-top: 10px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="password"
+      id="apiKeyInput"
+      placeholder="Enter your OpenAI API Key"
+    />
+    <button id="saveApiKey">Save API Key</button>
+    <button id="extractButton">Extract Text</button>
+    <div id="status"></div>
+    <div id="extractedContent"></div>
+    <button id="copyButton">Copy to Clipboard</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
